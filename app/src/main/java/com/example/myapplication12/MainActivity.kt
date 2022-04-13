@@ -15,7 +15,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_main)
-
+        val tv : TextView = findViewById(R.id.sample_text)
+        val b : Button = findViewById(R.id.button)
+        // Example of a call to a native method
+        b.setOnClickListener(View.OnClickListener {
+            tv.text = stringFromJNI()
+        })
 
     }
 
